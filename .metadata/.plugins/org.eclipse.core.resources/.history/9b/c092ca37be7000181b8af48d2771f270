@@ -1,0 +1,45 @@
+package br.com.alura;
+
+import br.com.caelum.stella.format.CNPJFormatter;
+import br.com.caelum.stella.format.CPFFormatter;
+import br.com.caelum.stella.format.Formatter;
+import br.com.caelum.stella.format.TituloEleitoralFormatter;
+
+public class FormatadorDocumento {
+
+	public static void main(String[] args) {
+		
+		String cpf = "86288366757";
+		String cnpj = "88794586000154";
+		String tituloEleitor = "232764330167";
+		
+		CPFFormatter formatterCPF = new CPFFormatter();
+		String cpfFormatado =  formatarDocumento(formatterCPF, cpf);
+		String cpfSemFormatacao = desformatarDocumento(formatterCPF , cpf);
+
+		System.out.println("CPF : " + cpf);
+		System.out.println(cpfFormatado);
+		System.out.println(cpfSemFormatacao);
+		
+		
+		String cnpjFormatado = formatarDocumento(new CNPJFormatter(), cnpj);
+		
+		System.out.println(cnpj);
+		System.out.println(cnpjFormatado);
+		//System.out.println(cnpjSemFormatacao);
+		
+		String tituloFormatado = formatarDocumento(new TituloEleitoralFormatter(), tituloEleitor);
+		
+		System.out.println(tituloEleitor);
+		System.out.println(tituloFormatado);
+
+	}
+	
+	private static String formatarDocumento(Formatter formatador, String documento){
+	    return formatador.format(documento);
+	}
+	
+	private static String desformatarDocumento(Formatter formatador, String documento) {
+		return formatador.unformat(documento);
+	}
+}

@@ -1,0 +1,15 @@
+package br.com.alura;
+
+public class Teste {
+	
+	public static void main(String[] args) {
+	
+		int a = 2;
+		int b = 4;
+		int i = 0;
+		int c = 0;
+		int d = 0;
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package br.com.alura;
+
+public class FormatadorDocumento {
+
+	public static void main(String[] args) {
+		String cpf = "86288366757";
+		String cnpj = "88794586000154";
+		String tituloEleitor = "232764330167";
+
+	}
+}

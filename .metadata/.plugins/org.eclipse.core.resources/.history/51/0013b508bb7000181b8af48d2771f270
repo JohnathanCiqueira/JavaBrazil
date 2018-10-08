@@ -1,0 +1,18 @@
+package br.com.alura;
+
+import br.com.caelum.stella.format.CPFFormatter;
+
+public class FormatadorDocumento {
+
+	public static void main(String[] args) {
+		String cpf = "862.883.667-57";
+		String cnpj = "88.794.586/0001-54";
+		String tituloEleitor = "232764330167";
+		
+		CPFFormatter formatadorCPF = new CPFFormatter();
+		String cpfSemFormatacao = formatadorCPF.unformat(cpf);
+		
+		System.out.println(formatadorCPF.unformat(cpf););
+
+	}
+}
